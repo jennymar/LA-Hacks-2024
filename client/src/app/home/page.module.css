@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+.page {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 95px;
+  gap: 150px;
+}
+
+.header {
+  font-family: "Kumbh Sans";
+  font-size: 55px;
+  font-weight: bold;
+  font-weight: 600;
+}
+
+.cookButton {
+  width: 15%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-left: 20px;
+  background-color: #ef8d63;
+  border: 0;
+  border-radius: 30px;
+  color: white;
+  font-weight: 535;
+  font-size: 12pt;
+  text-align: left;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
