@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 95px;
+}
+
+.header {
+  font-family: "Kumbh Sans";
+  font-size: 45px;
+  font-weight: bold;
+  font-weight: 600;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 120px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 55px;
+}
+
+.detailsRow {
+  display: flex;
+  flex-direction: row;
+  gap: 10rem;
+}
+
+.detailsCol {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.detailsSectionCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detailsLabel {
+  /* color: #393939; */
+  font-size: 16pt;
+}
+
+.ingredients {
+  /* border-radius: 20px; */
+  /* border-color: #f59d5b; */
+  border-radius: 16px;
+  border: 1px solid rgba(233, 132, 88, 39%);
+  background-color: rgba(233, 132, 88, 11%);
+  width: 27rem;
+  height: 25rem;
+}
+
+.mealRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.mealButton {
+  border-radius: 20px;
+  border: 2px solid rgba(233, 132, 88, 60%);
+  background-color: white;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.timeRow {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.timeInput {
+  border-radius: 12px;
+  border: 1px solid rgba(233, 132, 88, 39%);
+  background-color: rgba(233, 132, 88, 11%);
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 5rem;
+}
+
+.dietInput {
+  border-radius: 12px;
+  border: 1px solid rgba(233, 132, 88, 39%);
+  background-color: rgba(233, 132, 88, 11%);
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 28rem;
+  height: 9rem;
+}
