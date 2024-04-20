@@ -9,7 +9,8 @@ export default function Landing() {
       className={styles.page}
       style={{
         backgroundImage: `url(${"./LandingHero.svg"})`,
-        backgroundSize: "contain",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         width: "100%",
         height: "100%",
       }}
