@@ -9,6 +9,11 @@
   overflow-x: hidden;
 }
 
+.overlay {
+  display: flex;
+  flex-direction: column;
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -43,5 +48,13 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-bottom: 150px;
+  padding-bottom: 250px;
+}
+
+.missionCol {
+  display: flex;
+  flex-direction: column;
+  width: 25rem;
+  font-size: 16pt;
+  margin: 95px;
 }
