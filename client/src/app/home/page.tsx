@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "@/app/home/page.module.css";
 import NavBar from "@/components/NavBar";
-import { constrainedMemory } from "process";
 
 export default function Landing() {
   return (
