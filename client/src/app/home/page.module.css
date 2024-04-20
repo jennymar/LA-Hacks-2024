@@ -3,6 +3,10 @@
 .page {
   display: flex;
   flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -38,5 +42,6 @@
 .hero {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 50px;
+  padding-bottom: 150px;
 }
