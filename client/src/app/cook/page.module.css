@@ -50,7 +50,7 @@
 
 .detailsLabel {
   color: #393939;
-  font-size: 16pt;
+  font-size: 14pt;
 }
 
 .ingredients {
@@ -108,6 +108,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 95%;
 }
 
@@ -127,6 +128,12 @@
 .backButton {
   background-color: transparent;
   border: 0;
-  font-size: 25pt;
-  font-style: bold;
+  color: #393939;
+  font-size: 14pt;
+}
+
+.submitCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
 }

@@ -51,7 +51,7 @@ export default function Cook() {
             </div>
           </div>
           <div className={styles.buttonRow}>
-            <button className={styles.backButton}>&larr;</button>
+            <button className={styles.backButton}>&larr; &nbsp; Back</button>
             <button className={styles.submitButton}>Submit</button>
           </div>
         </div>
