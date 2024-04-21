@@ -54,7 +54,56 @@
 .missionCol {
   display: flex;
   flex-direction: column;
-  width: 25rem;
-  font-size: 16pt;
+  width: 50rem;
+  font-size: 30pt;
+  font-weight: bold;
   margin: 95px;
+  /* align-items: center; */
+  text-align: center;
+  color: #de6a28;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.firststep {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.laststep {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.steptext {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin: 95px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
