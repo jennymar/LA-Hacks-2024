@@ -38,18 +38,11 @@ export default function Cook() {
                     <input className={styles.timeInput} placeholder="hr" />
                     <input className={styles.timeInput} placeholder="min" />
                   </div>
-                  {/* <div className={styles.detailsSectionCol}>
-                    <div className={styles.detailsLabel}>Time:</div>
-                    <div className={styles.timeRow}>
-                      <input className={styles.timeInput} />
-                      <input className={styles.timeInput} />
-                    </div> */}
-                  {/* </div> */}
+
                   <div className={styles.detailsSectionCol}>
                     <div className={styles.detailsLabel}>
                       Dietary Restrictions:
                     </div>
-                    {/* <input className={styles.dietInput} /> */}
                   </div>
                   <textarea
                     className={styles.dietInput}
