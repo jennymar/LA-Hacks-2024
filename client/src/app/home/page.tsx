@@ -21,7 +21,7 @@ export default function Landing() {
           <div className={styles.container}>
             <NavBar />
             <div className={styles.hero}>
-              <div className={styles.header}>Welcome to ur mom</div>
+              <div className={styles.header}>Welcome to PantryPals</div>
               <a href="/cook">
                 <button className={styles.cookButton}>
                   Get Cooking &nbsp; &rarr;
