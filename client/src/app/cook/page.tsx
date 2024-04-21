@@ -45,7 +45,7 @@ export default function Cook() {
 
     const handleSubmitClick = () => {
       const currentPathname = window.location.pathname;
-      window.location.href = `http://localhost:3000/recipe`;
+      window.location.href = `http://localhost:3000/home`;
     };
 
     return (
@@ -166,7 +166,7 @@ export default function Cook() {
               </div>
             </div>
             <div className={styles.buttonRow}>
-              <a href="/home">
+              <a onClick={handleSubmitClick}>
                 <button className={styles.backButton}>
                   &larr; &nbsp; Back
                 </button>
