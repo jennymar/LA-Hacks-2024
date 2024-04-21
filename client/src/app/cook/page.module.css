@@ -1,63 +1,49 @@
 @import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
-
 .page {
-  display: flex;
-  flex-direction: column;
-}
-
-.column {
   display: flex;
   flex-direction: column;
   width: 90%;
   height: 90%;
-  margin-left: 95px;
-  margin-right: 95px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  margin-top: 45px;
+  margin-bottom: 45px;
+  margin-left: 90px;
+  margin-right: 90px;
 }
-
 .header {
   font-family: "Kumbh Sans";
   font-size: 45px;
   font-weight: bold;
   font-weight: 600;
 }
-
 .container {
   display: flex;
   flex-direction: column;
   gap: 60px;
 }
-
 .detailsContainer {
   display: flex;
   flex-direction: column;
   gap: 55px;
 }
-
 .detailsRow {
   display: flex;
   flex-direction: row;
   gap: 10rem;
 }
-
 .detailsCol {
   display: flex;
   flex-direction: column;
   gap: 40px;
 }
-
 .detailsSectionCol {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-
 .detailsLabel {
   color: #393939;
   font-size: 14pt;
 }
-
 .ingredients {
   border-radius: 16px;
   border: 1px solid rgba(233, 132, 88, 39%);
@@ -67,13 +53,11 @@
   height: 18rem;
   resize: none;
 }
-
 .mealRow {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
-
 .mealButton {
   border-radius: 20px;
   border: 2px solid rgba(233, 132, 88, 60%);
@@ -83,14 +67,13 @@
   padding-top: 10px;
   padding-bottom: 10px;
   color: rgba(233, 132, 88, 900%);
+  cursor: default;
 }
-
 .timeRow {
   display: flex;
   flex-direction: row;
   gap: 1rem;
 }
-
 .timeInput {
   border-radius: 12px;
   border: 1px solid rgba(233, 132, 88, 39%);
@@ -98,7 +81,6 @@
   padding: 15px;
   width: 5rem;
 }
-
 .dietInput {
   border-radius: 12px;
   border: 1px solid rgba(233, 132, 88, 39%);
@@ -108,7 +90,6 @@
   height: 2rem;
   resize: none;
 }
-
 .buttonRow {
   display: flex;
   flex-direction: row;
@@ -116,9 +97,11 @@
   align-items: center;
   width: 95%;
 }
-
+.submitText {
+  padding-left: 15px;
+  padding-right: 15px;
+}
 .submitButton {
-  width: 10%;
   padding: 1rem;
   background-color: #ef8d63;
   border: 0;
@@ -129,16 +112,32 @@
   text-align: center;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
 }
-
 .backButton {
   background-color: transparent;
   border: 0;
   color: #393939;
   font-size: 14pt;
 }
-
 .submitCol {
   display: flex;
   flex-direction: column;
   gap: 0px;
+}
+.clicked {
+  border-radius: 20px;
+  border: 2px solid rgba(233, 132, 88, 60%);
+  background-color: rgba(222, 106, 40, 19%);
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: rgba(233, 132, 88, 900%);
+}
+
+.recipemain {
+  display: flex;
+  flex-direction: column;
+  margin: 95px;
+  gap: 40px;
+  /* padding: 40px; */
 }

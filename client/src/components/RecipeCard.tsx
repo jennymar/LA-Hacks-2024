@@ -3,16 +3,14 @@ import styles from "./RecipeCard.module.css";
 
 export interface RecipeProps {
   name: string;
-  hrs: number;
-  min: number;
+  time: number;
   ingredients: string[];
   steps: string[];
   impact: string;
 }
 export default function RecipeCard({
   name,
-  hrs,
-  min,
+  time,
   ingredients,
   steps,
   impact,
@@ -21,24 +19,24 @@ export default function RecipeCard({
     <div className={styles.card}>
       <div className={styles.recipeName}>
         <div className={styles.header}>{name}</div>
-        <div className={styles.time}>
-          {hrs} hrs, {min} min
-        </div>
+        <div className={styles.time}>{time}</div>
       </div>
 
       <div className={styles.row}>
         <div className={styles.col}>
           <div className={styles.subheader}>Ingredients List</div>
-          <p className={styles.content}>{ingredients}</p>
+          <div>{ingredients}</div>
         </div>
 
         <div className={styles.col}>
           <div className={styles.subheader}>Steps</div>
-          <p className={styles.content}>{steps}</p>
+          <div>{steps}</div>
         </div>
       </div>
-      <div className={styles.header}>Environmental Impact</div>
-      <p>{impact}</p>
+      <div className={styles.col}>
+        <div className={styles.subheader}>Environmental Impact</div>
+        <div>{impact}</div>
+      </div>
     </div>
   );
 }
