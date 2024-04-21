@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap");
+
+.page {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  overflow-x: hidden;
+  color: black;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 95px;
+  gap: 150px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  background-color: #ef8d6380;
+  padding: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+  gap: 50px;
+}
+
+.intro {
+  font-weight: 200;
+  font-size: 20px;
+}
+
+.header {
+  font-family: "Kumbh Sans";
+  font-size: 55px;
+  font-weight: bold;
+  font-weight: 600;
+}
+
+.subheader {
+  /* font-family: "Inter"; */
+  font-size: 28px;
+  font-weight: 400;
+  width: max-content;
+}
+
+.content {
+  font-size: 20px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
