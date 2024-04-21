@@ -17,7 +17,10 @@
 .container {
   display: flex;
   flex-direction: column;
-  margin: 95px;
+  margin-left: 95px;
+  margin-right: 95px;
+  margin-top: 60px;
+  margin-bottom: 60px;
   gap: 150px;
 }
 
@@ -29,11 +32,11 @@
 }
 
 .cookButton {
-  width: 15%;
+  width: max-content;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 20px;
-  padding-left: 20px;
+  padding-right: 20px;
   background-color: #ef8d63;
   border: 0;
   border-radius: 30px;
@@ -48,13 +51,61 @@
   display: flex;
   flex-direction: column;
   gap: 50px;
-  padding-bottom: 250px;
+  padding-bottom: 350px;
 }
 
 .missionCol {
   display: flex;
   flex-direction: column;
-  width: 25rem;
-  font-size: 16pt;
+  width: 50rem;
+  font-size: 30pt;
+  font-weight: bold;
+  margin: 0px;
+  text-align: center;
+  color: #de6a28;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.firststep {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.step {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 2rem;
+}
+
+.laststep {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.steptext {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
   margin: 95px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

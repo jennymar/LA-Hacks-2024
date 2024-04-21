@@ -6,7 +6,7 @@ import NavBar from "@/components/NavBar";
 import { useChat } from "ai/react";
 import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
-import { useRouter } from 'next/router';
+import { useRouter } from "next/router";
 
 export default function Cook() {
   const { messages, input, handleInputChange, handleSubmit, isLoading, stop } =
@@ -36,9 +36,9 @@ export default function Cook() {
       console.log("meal: ", meal);
     });
 
-    const handleMealClick = (stringValue:string) => {
+    const handleMealClick = (stringValue: string) => {
       setMeal(stringValue);
-    }
+    };
 
     const handleSubmitClick = () => {
       const currentPathname = window.location.pathname;
@@ -86,11 +86,36 @@ export default function Cook() {
                     <div className={styles.detailsSectionCol}>
                       <div className={styles.detailsLabel}>Meal Type:</div>
                       <div className={styles.mealRow}>
-                        <div className={styles.mealButton} onClick={() => handleMealClick("Breakfast")}>Breakfast</div>
-                        <div className={styles.mealButton} onClick={() => handleMealClick("Lunch")}>Lunch</div>
-                        <div className={styles.mealButton} onClick={() => handleMealClick("Dinner")}>Dinner</div>
-                        <div className={styles.mealButton} onClick={() => handleMealClick("Snack")}>Snack</div>
-                        <div className={styles.mealButton} onClick={() => handleMealClick("Dessert")}>Dessert</div>
+                        <div
+                          className={styles.mealButton}
+                          onClick={() => handleMealClick("Breakfast")}
+                        >
+                          Breakfast
+                        </div>
+                        <div
+                          className={styles.mealButton}
+                          onClick={() => handleMealClick("Lunch")}
+                        >
+                          Lunch
+                        </div>
+                        <div
+                          className={styles.mealButton}
+                          onClick={() => handleMealClick("Dinner")}
+                        >
+                          Dinner
+                        </div>
+                        <div
+                          className={styles.mealButton}
+                          onClick={() => handleMealClick("Snack")}
+                        >
+                          Snack
+                        </div>
+                        <div
+                          className={styles.mealButton}
+                          onClick={() => handleMealClick("Dessert")}
+                        >
+                          Dessert
+                        </div>
                       </div>
                     </div>
                     <div className={styles.detailsSectionCol}>
@@ -129,9 +154,12 @@ export default function Cook() {
                 <button className={styles.backButton}>
                   &larr; &nbsp; Back
                 </button>
-                  <button className={styles.submitButton} onClick={handleSubmitClick}>
-                    <div className={styles.submitText}>Submit</div>
-                  </button>
+                <button
+                  className={styles.submitButton}
+                  onClick={handleSubmitClick}
+                >
+                  <div className={styles.submitText}>Submit</div>
+                </button>
               </div>
             </div>
           </form>

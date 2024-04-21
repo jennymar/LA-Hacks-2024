@@ -22,6 +22,8 @@
 .page_names {
   font-size: 18px;
   font-weight: 200;
+  text-decoration: none;
+  color: black;
 }
 
 .note {
