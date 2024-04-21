@@ -12,8 +12,7 @@ export default function Recipe() {
         <div className={styles.intro}>your generated recipe...</div>
         <RecipeCard
           name="Pesto Panini"
-          hrs={5}
-          min={15}
+          time={5}
           ingredients={["a", "b", "c"]}
           steps={["1", "2", "3"]}
           impact="saving the world"

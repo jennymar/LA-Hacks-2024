@@ -7,6 +7,7 @@
   padding-left: 120px;
   padding-right: 120px;
   gap: 50px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
 }
 
 .intro {
@@ -16,7 +17,7 @@
 
 .header {
   font-family: "Kumbh Sans";
-  font-size: 55px;
+  font-size: 40px;
   font-weight: bold;
   font-weight: 600;
 }
@@ -35,10 +36,11 @@
 .row {
   display: flex;
   flex-direction: row;
-  gap: 200px;
+  gap: 5rem;
 }
 
 .col {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
 }

@@ -7,6 +7,7 @@ import { useChat } from "ai/react";
 import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
 import { useRouter } from "next/router";
+import RecipeCard from "@/components/RecipeCard";
 
 export default function Cook() {
   const { messages, input, handleInputChange, handleSubmit, isLoading, stop } =
@@ -27,6 +28,7 @@ export default function Cook() {
     const [min, setMin] = useState<string>();
     const [dietRes, setDietRes] = useState<string>();
     const [meal, setMeal] = useState<string>();
+    const [clicked, setClicked] = useState<string>("");
 
     useEffect(() => {
       console.log("ingredients: ", ingredients);
@@ -38,6 +40,7 @@ export default function Cook() {
 
     const handleMealClick = (stringValue: string) => {
       setMeal(stringValue);
+      setClicked(stringValue);
     };
 
     const handleSubmitClick = () => {
@@ -75,6 +78,7 @@ export default function Cook() {
                         Ingredients List
                       </div>
                       <textarea
+                        required
                         className={styles.ingredients}
                         placeholder="What do you have in your pantry..."
                         value={input}
@@ -87,31 +91,41 @@ export default function Cook() {
                       <div className={styles.detailsLabel}>Meal Type:</div>
                       <div className={styles.mealRow}>
                         <div
-                          className={styles.mealButton}
+                          className={`${styles.mealButton} ${
+                            clicked === "Breakfast" ? styles.clicked : ""
+                          }`}
                           onClick={() => handleMealClick("Breakfast")}
                         >
                           Breakfast
                         </div>
                         <div
-                          className={styles.mealButton}
+                          className={`${styles.mealButton} ${
+                            clicked === "Lunch" ? styles.clicked : ""
+                          }`}
                           onClick={() => handleMealClick("Lunch")}
                         >
                           Lunch
                         </div>
                         <div
-                          className={styles.mealButton}
+                          className={`${styles.mealButton} ${
+                            clicked === "Dinner" ? styles.clicked : ""
+                          }`}
                           onClick={() => handleMealClick("Dinner")}
                         >
                           Dinner
                         </div>
                         <div
-                          className={styles.mealButton}
+                          className={`${styles.mealButton} ${
+                            clicked === "Snack" ? styles.clicked : ""
+                          }`}
                           onClick={() => handleMealClick("Snack")}
                         >
                           Snack
                         </div>
                         <div
-                          className={styles.mealButton}
+                          className={`${styles.mealButton} ${
+                            clicked === "Dessert" ? styles.clicked : ""
+                          }`}
                           onClick={() => handleMealClick("Dessert")}
                         >
                           Dessert
@@ -154,10 +168,7 @@ export default function Cook() {
                 <button className={styles.backButton}>
                   &larr; &nbsp; Back
                 </button>
-                <button
-                  className={styles.submitButton}
-                  onClick={handleSubmitClick}
-                >
+                <button className={styles.submitButton} onClick={stop}>
                   <div className={styles.submitText}>Submit</div>
                 </button>
               </div>
@@ -178,30 +189,57 @@ export default function Cook() {
       const parsedContent = JSON.parse(messages[1].content);
       const SPACE = " ";
       console.log("parsedContent.title: ", parsedContent.title);
+      console.log("parsedContent.time: ", parsedContent.time);
+      console.log("parsedContent.ingredients: ", parsedContent.ingredients);
+      console.log("parsedContent.steps: ", parsedContent.steps);
+
+      const ingredientsList = parsedContent.ingredients
+        .map(
+          (ingredient: { amountofunit: any; ingredient: any }) =>
+            `${ingredient.amountofunit} ${ingredient.ingredient}`,
+        )
+        .join("\n");
+      const stepsList = parsedContent.steps
+        .map((step: { description: any }) => `${step.description} `)
+        .join("\n");
+
+      console.log("ingredientsList: ", ingredientsList);
+
       return (
-        <div
-          id="chatbox"
-          className="flex flex-col w-full text-left mt-4 gap-4 whitespace-pre-wrap"
-        >
-          <div> Title: {parsedContent.title}</div>
-          <div> Time: {parsedContent.time}</div>
-          <div> Ingredients: </div>
-          <ul>
-            {parsedContent.ingredients.map((ingredient: any, index: number) => (
-              <li key={index}>
-                {ingredient.amountofunit}
-                {SPACE}
-                {ingredient.ingredient}
-              </li>
-            ))}
-          </ul>
-          <div> Steps: </div>
-          <ol>
-            {parsedContent.steps.map((step: any, index: number) => (
-              <li key={index}>{step.description}</li>
-            ))}
-          </ol>
+        <div className={styles.recipemain}>
+          <div className={styles.intro}>your generated recipe...</div>
+          <RecipeCard
+            name={parsedContent.title}
+            time={parsedContent.time}
+            ingredients={ingredientsList}
+            steps={stepsList}
+            impact="saving the world"
+          />
         </div>
+
+        // <div
+        //   id="chatbox"
+        //   className="flex flex-col w-full text-left mt-4 gap-4 whitespace-pre-wrap"
+        // >
+        //   <div> Title: {parsedContent.title}</div>
+        //   <div> Time: {parsedContent.time}</div>
+        //   <div> Ingredients: </div>
+        //   <ul>
+        //     {parsedContent.ingredients.map((ingredient: any, index: number) => (
+        //       <li key={index}>
+        //         {ingredient.amountofunit}
+        //         {SPACE}
+        //         {ingredient.ingredient}
+        //       </li>
+        //     ))}
+        //   </ul>
+        //   <div> Steps: </div>
+        //   <ol>
+        //     {parsedContent.steps.map((step: any, index: number) => (
+        //       <li key={index}>{step.description}</li>
+        //     ))}
+        //   </ol>
+        // </div>
       );
     }
   }
