@@ -6,4 +6,6 @@
 
 .navbarItem {
   font-weight: 200;
+  text-decoration: none;
+  color: black;
 }

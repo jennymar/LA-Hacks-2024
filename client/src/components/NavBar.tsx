@@ -1,12 +1,22 @@
 import React from "react";
 import styles from "./NavBar.module.css";
 
-const NavBar = () => {
+type NavBarProps = {
+  page?: "home" | "cook" | "about";
+};
+
+const NavBar = ({ page }: NavBarProps) => {
   return (
     <div className={styles.navbar}>
-      <div className={styles.navbarItem}>Home</div>{" "}
-      <div className={styles.navbarItem}>Cook</div>{" "}
-      <div className={styles.navbarItem}>About</div>
+      <a className={styles.navbarItem} href="/home">
+        Home
+      </a>
+      <a className={styles.navbarItem} href="/cook">
+        Cook
+      </a>
+      <a className={styles.navbarItem} href="/about">
+        About
+      </a>
     </div>
   );
 };
