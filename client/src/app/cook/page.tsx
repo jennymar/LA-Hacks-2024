@@ -196,12 +196,15 @@ export default function Cook() {
       const ingredientsList = parsedContent.ingredients
         .map(
           (ingredient: { amountofunit: any; ingredient: any }) =>
-            `${ingredient.amountofunit} ${ingredient.ingredient}`,
+            `- ${ingredient.amountofunit} ${ingredient.ingredient}`,
         )
-        .join("\n");
+        .join("\r\n");
       const stepsList = parsedContent.steps
-        .map((step: { description: any }) => `${step.description} `)
-        .join("\n");
+        .map(
+          (step: { description: any }, index: any) =>
+            `${index + 1}. ${step.description} `,
+        )
+        .join("\r\n");
 
       console.log("ingredientsList: ", ingredientsList);
 
@@ -213,7 +216,7 @@ export default function Cook() {
             time={parsedContent.time}
             ingredients={ingredientsList}
             steps={stepsList}
-            impact="saving the world"
+            impact={parsedContent.environmentalImpact}
           />
         </div>
 

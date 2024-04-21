@@ -25,12 +25,24 @@ export default function RecipeCard({
       <div className={styles.row}>
         <div className={styles.col}>
           <div className={styles.subheader}>Ingredients List</div>
-          <div>{ingredients}</div>
+          <div
+            style={{
+              whiteSpace: "pre-line",
+            }}
+          >
+            {ingredients}
+          </div>
         </div>
 
         <div className={styles.col}>
           <div className={styles.subheader}>Steps</div>
-          <div>{steps}</div>
+          <div
+            style={{
+              whiteSpace: "pre-line",
+            }}
+          >
+            {steps}
+          </div>
         </div>
       </div>
       <div className={styles.col}>
