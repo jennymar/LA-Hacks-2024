@@ -1,0 +1,30 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-x: hidden;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
+  padding-top: 300px;
+  padding-bottom: 40px;
+}
+.page_names_row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.page_names {
+  font-size: 18px;
+  font-weight: 200;
+}
+
+.note {
+  font-size: 24px;
+  font-weight: 200;
+}

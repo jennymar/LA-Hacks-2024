@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/app/cook/page.module.css";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export default function Cook() {
   return (
@@ -37,10 +38,18 @@ export default function Cook() {
                     <input className={styles.timeInput} placeholder="hr" />
                     <input className={styles.timeInput} placeholder="min" />
                   </div>
-                </div>
-                <div className={styles.detailsSectionCol}>
-                  <div className={styles.detailsLabel}>
-                    Dietary Restrictions:
+                  <div className={styles.detailsSectionCol}>
+                    <div className={styles.detailsLabel}>Time:</div>
+                    <div className={styles.timeRow}>
+                      <input className={styles.timeInput} />
+                      <input className={styles.timeInput} />
+                    </div>
+                  </div>
+                  <div className={styles.detailsSectionCol}>
+                    <div className={styles.detailsLabel}>
+                      Dietary Restrictions:
+                    </div>
+                    <input className={styles.dietInput} />
                   </div>
                   <textarea
                     className={styles.dietInput}
