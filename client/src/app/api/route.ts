@@ -20,7 +20,8 @@ export async function POST(req: Request, res: Response) {
     reqBody.data.min +
     " min or time. I also have the dietary restrictions of " +
     reqBody.data.dietRes +
-    ". " +
+    ". The type of dish I would like to make is: " +
+    reqBody.data.meal +
     '. Please be in depth in your steps. For each of the ingredients listed, specify the amount and unit to be used. Use the following schema: {"title": str, "time": str, "ingredients": list[INGREDIENT], "steps": list[STEP]}\n INGREDIENT = {"amountofunit": str, "ingredient": str} \n STEP = {"description": str} \n All fields are required. Important: Only returna single piece of valid JSON text.';
   //"I have a list of ingredients and I want to make a recipe from the following: " +
   //reqBody.data.prompt +

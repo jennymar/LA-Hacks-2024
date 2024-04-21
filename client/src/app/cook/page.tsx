@@ -1,10 +1,12 @@
 "use client";
+
 import React, { useEffect, useState } from "react";
 import styles from "@/app/cook/page.module.css";
 import NavBar from "@/components/NavBar";
 import { useChat } from "ai/react";
 import { redirect } from "next/dist/server/api-utils";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 export default function Cook() {
   const { messages, input, handleInputChange, handleSubmit, isLoading, stop } =
@@ -24,13 +26,19 @@ export default function Cook() {
     const [hour, setHour] = useState<string>();
     const [min, setMin] = useState<string>();
     const [dietRes, setDietRes] = useState<string>();
+    const [meal, setMeal] = useState<string>();
 
     useEffect(() => {
       console.log("ingredients: ", ingredients);
       console.log("hour: ", hour);
       console.log("min: ", min);
       console.log("dietRes: ", dietRes);
+      console.log("meal: ", meal);
     });
+
+    const handleMealClick = (stringValue:string) => {
+      setMeal(stringValue);
+    }
 
     return (
       <main className={styles.page}>
@@ -46,6 +54,7 @@ export default function Cook() {
                   hr: hour as string,
                   min: min as string,
                   dietRes: dietRes as string,
+                  meal: meal as string,
                 },
               });
             }}
@@ -72,11 +81,11 @@ export default function Cook() {
                     <div className={styles.detailsSectionCol}>
                       <div className={styles.detailsLabel}>Meal Type:</div>
                       <div className={styles.mealRow}>
-                        <button className={styles.mealButton}>Breakfast</button>
-                        <button className={styles.mealButton}>Lunch</button>
-                        <button className={styles.mealButton}>Dinner</button>
-                        <button className={styles.mealButton}>Snack</button>
-                        <button className={styles.mealButton}>Dessert</button>
+                        <div className={styles.mealButton} onClick={() => handleMealClick("Breakfast")}>Breakfast</div>
+                        <div className={styles.mealButton} onClick={() => handleMealClick("Lunch")}>Lunch</div>
+                        <div className={styles.mealButton} onClick={() => handleMealClick("Dinner")}>Dinner</div>
+                        <div className={styles.mealButton} onClick={() => handleMealClick("Snack")}>Snack</div>
+                        <div className={styles.mealButton} onClick={() => handleMealClick("Dessert")}>Dessert</div>
                       </div>
                     </div>
                     <div className={styles.detailsSectionCol}>
@@ -115,11 +124,9 @@ export default function Cook() {
                 <button className={styles.backButton}>
                   &larr; &nbsp; Back
                 </button>
-                <Link href={"/recipe"}>
                   <button className={styles.submitButton} onClick={stop}>
                     <div className={styles.submitText}>Submit</div>
                   </button>
-                </Link>
               </div>
             </div>
           </form>
