@@ -196,12 +196,15 @@ export default function Cook() {
       const ingredientsList = parsedContent.ingredients
         .map(
           (ingredient: { amountofunit: any; ingredient: any }) =>
-            `${ingredient.amountofunit} ${ingredient.ingredient}`
+            `- ${ingredient.amountofunit} ${ingredient.ingredient}`,
         )
-        .join("\n");
+        .join("\r\n");
       const stepsList = parsedContent.steps
-        .map((step: { description: any }) => `${step.description} `)
-        .join("\n");
+        .map(
+          (step: { description: any }, index: any) =>
+            `${index + 1}. ${step.description} `,
+        )
+        .join("\r\n");
 
       console.log("ingredientsList: ", ingredientsList);
 
@@ -213,33 +216,9 @@ export default function Cook() {
             time={parsedContent.time}
             ingredients={ingredientsList}
             steps={stepsList}
-            impact="saving the world"
+            impact={parsedContent.environmentalImpact}
           />
         </div>
-
-        // <div
-        //   id="chatbox"
-        //   className="flex flex-col w-full text-left mt-4 gap-4 whitespace-pre-wrap"
-        // >
-        //   <div> Title: {parsedContent.title}</div>
-        //   <div> Time: {parsedContent.time}</div>
-        //   <div> Ingredients: </div>
-        //   <ul>
-        //     {parsedContent.ingredients.map((ingredient: any, index: number) => (
-        //       <li key={index}>
-        //         {ingredient.amountofunit}
-        //         {SPACE}
-        //         {ingredient.ingredient}
-        //       </li>
-        //     ))}
-        //   </ul>
-        //   <div> Steps: </div>
-        //   <ol>
-        //     {parsedContent.steps.map((step: any, index: number) => (
-        //       <li key={index}>{step.description}</li>
-        //     ))}
-        //   </ol>
-        // </div>
       );
     }
   }
