@@ -42,5 +42,3 @@ export default function RecipeCard({
     </div>
   );
 }
-
-// export default RecipeCard;
