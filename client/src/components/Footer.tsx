@@ -16,9 +16,15 @@ const Footer = () => {
       <>
         <div className={styles.main}>
           <div className={styles.page_names_row}>
-            <div className={styles.page_names}>Home</div>{" "}
-            <div className={styles.page_names}>Cook</div>{" "}
-            <div className={styles.page_names}>About</div>
+            <a className={styles.page_names} href="/home">
+              Home
+            </a>
+            <a className={styles.page_names} href="/cook">
+              Cook
+            </a>
+            <a className={styles.page_names} href="/about">
+              About
+            </a>
           </div>
           <div className={styles.note}>Made with ❤️ at LA Hacks</div>
         </div>
