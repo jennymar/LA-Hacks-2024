@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "@/app/home/page.module.css";
 import NavBar from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export default function Landing() {
   return (
@@ -24,6 +25,7 @@ export default function Landing() {
             </button>
           </div>
         </div>
+        <Footer />
       </>
     </main>
   );
