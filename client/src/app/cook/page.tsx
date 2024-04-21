@@ -2,7 +2,6 @@
 import React, { useEffect, useState } from "react";
 import styles from "@/app/cook/page.module.css";
 import NavBar from "@/components/NavBar";
-import Footer from "@/components/Footer";
 import { useChat } from "ai/react";
 
 export default function Cook() {
@@ -119,9 +118,47 @@ export default function Cook() {
                 </button>
               </div>
             </div>
-          </div>
+          </form>
+        </>
+      </main>
+    );
+  }
+
+  function OutputResponse() {
+    console.log("messages: ", messages);
+    if (
+      messages &&
+      messages[1] &&
+      messages[1].content.substring(messages[1].content.length - 2) === "]}"
+    ) {
+      const parsedContent = JSON.parse(messages[1].content);
+      const SPACE = " ";
+      console.log("parsedContent.title: ", parsedContent.title);
+      return (
+        <div
+          id="chatbox"
+          className="flex flex-col w-full text-left mt-4 gap-4 whitespace-pre-wrap"
+        >
+          <div> Title: {parsedContent.title}</div>
+          <div> Time: {parsedContent.time}</div>
+          <div> Ingredients: </div>
+          <ul>
+            {parsedContent.ingredients.map((ingredient: any, index: number) => (
+              <li key={index}>
+                {ingredient.amountofunit}
+                {SPACE}
+                {ingredient.ingredient}
+              </li>
+            ))}
+          </ul>
+          <div> Steps: </div>
+          <ol>
+            {parsedContent.steps.map((step: any, index: number) => (
+              <li key={index}>{step.description}</li>
+            ))}
+          </ol>
         </div>
-      </>
-    </main>
-  );
+      );
+    }
+  }
 }
