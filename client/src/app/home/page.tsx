@@ -6,23 +6,13 @@ import Image from "next/image";
 
 export default function Landing() {
   return (
-    <main
-      className={styles.page}
-      // style={{
-      //   backgroundImage: `url(${"./LandingHero.svg"})`,
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   width: "100%",
-      //   height: "100%",
-      // }}
-    >
+    <main className={styles.page}>
       <>
         <div
           className={styles.overlay}
           style={{
             backgroundImage: `url(${"./LandingHero.svg"})`,
             backgroundSize: "cover",
-            // backgroundRepeat: "no-repeat",
             width: "100%",
             height: "100%",
           }}
@@ -30,10 +20,12 @@ export default function Landing() {
           <div className={styles.container}>
             <NavBar />
             <div className={styles.hero}>
-              <div className={styles.header}>Welcome to superswagproject</div>
-              <button className={styles.cookButton}>
-                Get Cooking &nbsp; &rarr;
-              </button>
+              <div className={styles.header}>Welcome to ur mom</div>
+              <a href="/cook">
+                <button className={styles.cookButton}>
+                  Get Cooking &nbsp; &rarr;
+                </button>
+              </a>
             </div>
           </div>
         </div>
