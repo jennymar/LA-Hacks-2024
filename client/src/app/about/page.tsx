@@ -59,6 +59,7 @@ export default function About() {
               <img src="./syd.svg" />
               <div className={styles.devName}>Sydney Zhang </div>
               <div>Developer</div>
+              {/* hi */}
             </div>
           </div>
         </div>
