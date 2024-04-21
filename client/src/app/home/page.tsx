@@ -5,16 +5,7 @@ import Footer from "@/components/Footer";
 
 export default function Landing() {
   return (
-    <main
-      className={styles.page}
-      // style={{
-      //   backgroundImage: `url(${"./LandingHero.svg"})`,
-      //   backgroundSize: "cover",
-      //   backgroundRepeat: "no-repeat",
-      //   width: "100%",
-      //   height: "100%",
-      // }}
-    >
+    <main className={styles.page}>
       <>
         <div
           className={styles.overlay}

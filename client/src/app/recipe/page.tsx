@@ -37,11 +37,6 @@ export default function Recipe() {
               </p>
             </div>
           </div>
-          {/* <div className={styles.header}>Environmental Impact</div>
-          <p>
-            With one panini, you reduced your carbon footprint by .... Blurb
-            about specific ingredients
-          </p> */}
         </div>
       </div>
     </div>

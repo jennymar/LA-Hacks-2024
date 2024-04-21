@@ -3,6 +3,8 @@ import React, { useEffect, useState } from "react";
 import styles from "@/app/cook/page.module.css";
 import NavBar from "@/components/NavBar";
 import { useChat } from "ai/react";
+import { redirect } from "next/dist/server/api-utils";
+import Link from "next/link";
 
 export default function Cook() {
   const { messages, input, handleInputChange, handleSubmit, isLoading, stop } =
@@ -113,9 +115,11 @@ export default function Cook() {
                 <button className={styles.backButton}>
                   &larr; &nbsp; Back
                 </button>
-                <button className={styles.submitButton} onClick={stop}>
-                  Submit
-                </button>
+                <Link href={"/recipe"}>
+                  <button className={styles.submitButton} onClick={stop}>
+                    <div className={styles.submitText}>Submit</div>
+                  </button>
+                </Link>
               </div>
             </div>
           </form>

@@ -112,8 +112,12 @@
   width: 95%;
 }
 
+.submitText {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 .submitButton {
-  width: 10%;
   padding: 1rem;
   background-color: #ef8d63;
   border: 0;
