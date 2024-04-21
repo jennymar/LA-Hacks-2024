@@ -7,11 +7,13 @@
   margin: 0;
   width: 100%;
   overflow-x: hidden;
+  color: black;
 }
 
-.overlay {
+.main {
   display: flex;
   flex-direction: column;
+  gap: 50px;
 }
 
 .container {
@@ -21,6 +23,22 @@
   gap: 150px;
 }
 
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  background-color: #ef8d6380;
+  padding: 80px;
+  padding-left: 120px;
+  padding-right: 120px;
+  gap: 50px;
+}
+
+.intro {
+  font-weight: 200;
+  font-size: 20px;
+}
+
 .header {
   font-family: "Kumbh Sans";
   font-size: 55px;
@@ -28,33 +46,24 @@
   font-weight: 600;
 }
 
-.cookButton {
-  width: 15%;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 20px;
-  padding-left: 20px;
-  background-color: #ef8d63;
-  border: 0;
-  border-radius: 30px;
-  color: white;
-  font-weight: 535;
-  font-size: 12pt;
-  text-align: left;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.19);
+.subheader {
+  /* font-family: "Inter"; */
+  font-size: 28px;
+  font-weight: 400;
+  width: max-content;
 }
 
-.hero {
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  padding-bottom: 250px;
+.content {
+  font-size: 20px;
 }
 
-.missionCol {
+.row {
+  display: flex;
+  flex-direction: row;
+  gap: 200px;
+}
+
+.col {
   display: flex;
   flex-direction: column;
-  width: 25rem;
-  font-size: 16pt;
-  margin: 95px;
 }
