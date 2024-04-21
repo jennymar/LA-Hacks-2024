@@ -24,7 +24,8 @@ export default function Landing() {
             backgroundSize: "cover",
             // backgroundRepeat: "no-repeat",
             width: "100%",
-            height: "100%",
+            // height: "100%",
+            height: "auto",
           }}
         >
           <div className={styles.container}>
@@ -52,8 +53,8 @@ export default function Landing() {
               <Image
                 src="/icon1.svg"
                 alt="Internal Error"
-                width={235}
-                height={238}
+                width={185}
+                height={183}
               />{" "}
               <div className={styles.steptext} style={{ color: "#DE6A28" }}>
                 1. Input your ingredients
@@ -64,8 +65,8 @@ export default function Landing() {
               <Image
                 src="/icon2.svg"
                 alt="Internal Error"
-                width={321}
-                height={315}
+                width={248}
+                height={244}
               />{" "}
               <div className={styles.steptext} style={{ color: "#5F82B8" }}>
                 2. Create recipe
@@ -76,8 +77,8 @@ export default function Landing() {
               <Image
                 src="/icon3.svg"
                 alt="Internal Error"
-                width={366}
-                height={279}
+                width={281}
+                height={214}
               />{" "}
               <div className={styles.steptext} style={{ color: "#5b8e69" }}>
                 3. Start cooking
